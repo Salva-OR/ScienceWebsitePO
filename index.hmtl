@@ -1,0 +1,125 @@
+<EDIT THE HTML LINK>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+<title>Science Website</title>
+<link rel="icon" type="ico" href="https://cdn.discordapp.com/attachments/1146801394314125353/1148160222007922688/Earth.ico">
+</head>
+
+<body>
+<header class="sticky-header">
+<nav>
+<ul class="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="members.html">Members</a></li>
+<li><a href="#">Interactive Animation</a></li>
+</ul>
+</nav>
+</header>
+<main>
+
+<div class="homepagecontent">
+<img src="https://cdn.discordapp.com/attachments/1146801394314125353/1147170707336335400/Star.png" alt="Star" class="title-image" id="clickable-image">
+<h1 class="glowing-text" class="reflection-text">The Universe...</h1>
+<p class="homepagetext" id="homepagetypingtext"></p>
+</div>
+
+<div class="button-section">
+<button class="interactive-button" id="bigbang">
+<img src="https://cdn.discordapp.com/attachments/1146801394314125353/1147194013934440509/BigBangButton.png" alt="Big Bang Button">
+</button>
+<button class="interactive-button" id="universelink">
+<img src="https://cdn.discordapp.com/attachments/1146801394314125353/1147194013598875848/UniverseButton.png" alt="Universe Button">
+</button>
+<button class="interactive-button" id="solarsystemlink">
+<img src="https://cdn.discordapp.com/attachments/1146801394314125353/1147194013301096529/SolarSystemButton.png" alt="Solar System Button">
+</button>
+<button class="interactive-button" id="earthlink">
+<img src="https://cdn.discordapp.com/attachments/1146801394314125353/1147194014290952242/EarthButton.png" alt="Earth Button">
+</button>
+<button class="interactive-button" id="geologictimescalelink">
+<img src="https://cdn.discordapp.com/attachments/1146801394314125353/1147194012902641664/GeologicTimeZoneButton.png" alt="Geologic Time Zone Button">
+</button>
+</div>
+
+</main>
+<script src="script.js"></script>
+<script>
+const clickableImage = document.getElementById('bigbanglink');
+clickableImage.addEventListener('click', function () {
+    document.body.style.backgroundColor = 'white';
+    window.location.href = 'BigBang.html';
+});
+
+<script src="script.js"></script>
+<script>
+const clickableImage = document.getElementById('universelink');
+clickableImage.addEventListener('click', function () {
+    document.body.style.backgroundColor = 'white';
+    window.location.href = 'Universe.html';
+});
+
+<script src="script.js"></script>
+<script>
+const clickableImage = document.getElementById('solarsystemlink');
+clickableImage.addEventListener('click', function () {
+    document.body.style.backgroundColor = 'white';
+    window.location.href = 'SolarSystem.html';
+});
+
+<script src="script.js"></script>
+<script>
+const clickableImage = document.getElementById('earthlink');
+clickableImage.addEventListener('click', function () {
+    document.body.style.backgroundColor = 'white';
+    window.location.href = 'Earth.html';
+});
+
+<script src="script.js"></script>
+<script>
+const clickableImage = document.getElementById('geologictimescalelink');
+clickableImage.addEventListener('click', function () {
+    document.body.style.backgroundColor = 'white';
+    window.location.href = 'GeologicTimeScale.html';
+});
+
+
+const text = "A comprehensive site that tackles about the creation of the universe, and the current state it has now.<br>Hello.";
+const typingSpeed = 50; 
+const lineBreakDelay = 1000; 
+const typingTextElement = document.getElementById("homepagetypingtext");
+
+function typeText() {
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      if (text.charAt(i) === "<" && text.charAt(i + 1) === "b" && text.charAt(i + 2) === "r" && text.charAt(i + 3) === ">") {
+        // If it's "<br>", add a line break
+        typingTextElement.innerHTML += "<br>";
+        i += 4; // Skip "<br>" characters
+        setTimeout(type, lineBreakDelay); // Pause after a line break
+      } else {
+        typingTextElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, typingSpeed);
+      }
+    }
+  }
+  type();
+}
+
+typeText();
+
+
+
+
+
+</script>
+
+</body>
+</html>
